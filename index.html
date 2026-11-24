@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="uk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title></title>
+<meta name="description" content="">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;1,600&family=Manrope:wght@400..800&display=swap&subset=cyrillic">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<svg xmlns="http://www.w3.org/2000/svg" class="icon-library" aria-hidden="true">
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M4 12h15m-6-6 6 6-6 6"/></symbol>
+  <symbol id="i-up" viewBox="0 0 24 24"><path d="M7 17 17 7M7 7h10v10"/></symbol>
+  <symbol id="i-down" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M20 10c0 5-8 10-8 10S4 15 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><path d="M7 3H4.8C3.8 3 3 3.9 3.1 4.9 4 13.1 10.9 20 19.1 20.9c1 .1 1.9-.7 1.9-1.7V17a1.5 1.5 0 0 0-1-1.4l-3.5-1.2a1.5 1.5 0 0 0-1.7.5l-.9 1.1a14 14 0 0 1-6-6l1.2-.9a1.5 1.5 0 0 0 .5-1.7L8.4 4A1.5 1.5 0 0 0 7 3Z"/></symbol>
+  <symbol id="i-instagram" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><path d="M17.6 6.4h.01" stroke-width="2.6"/></symbol>
+  <symbol id="i-send" viewBox="0 0 24 24"><path d="M21 3 3 10.5l7 2.5 2.5 7L21 3Zm-11 10 4-4"/></symbol>
+  <symbol id="i-chat" viewBox="0 0 24 24"><path d="M4 12a8 8 0 1 1 3.6 6.7L4 20l1.3-3.4A8 8 0 0 1 4 12Z"/></symbol>
+  <symbol id="i-star" viewBox="0 0 24 24"><path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1-4.4-4.3 6.1-.9L12 3Z"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+</svg>
+
+<a class="skip" href="#main">До вмісту</a>
+<div class="demo-bar" role="note" data-need="demo" data-bind="demoText"></div>
+<header class="site-header">
+  <div class="wrap header-content">
+    <a class="brand" href="#top"><strong data-bind="name"></strong><small data-bind="city"></small></a>
+    <nav class="site-nav" id="site-nav" aria-label="Основна навігація">
+      <a data-need="items" href="#items" data-bind="itemsNav"></a>
+      <a data-need="reviews" href="#reviews">Відгуки</a>
+      <a href="#visit">Контакти</a>
+    </nav>
+    <div class="header-actions">
+      <a class="icon-link header-ig" data-need="instagram" data-ig target="_blank" rel="noopener" aria-label="Instagram"><svg class="icon"><use href="#i-instagram"/></svg></a>
+      <a class="button button-primary button-small header-phone" data-need="phone" data-call><svg class="icon"><use href="#i-phone"/></svg><span data-bind="phoneDisplay"></span></a>
+      <button type="button" class="nav-toggle icon-link" aria-expanded="false" aria-controls="site-nav" aria-label="Відкрити меню"><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+  <section class="hero" id="top" aria-labelledby="hero-title">
+    <div class="hero-visual" id="heroVisual"></div>
+    <div class="wrap hero-content">
+      <a class="location-pill" href="#visit"><svg class="icon"><use href="#i-pin"/></svg><span data-bind="city"></span><span data-need="address"> · <span data-bind="address"></span></span></a>
+      <h1 id="hero-title"><span data-bind="name" style="color:inherit"></span><span>.</span></h1>
+      <p class="hero-kicker" data-bind="category"></p>
+      <p class="hero-copy"><span data-bind="tagline"></span><br><span data-bind="lead"></span></p>
+      <div class="hero-actions">
+        <a class="button button-primary" data-need="items" href="#items"><span data-bind="itemsTitle"></span> <svg class="icon"><use href="#i-arrow"/></svg></a>
+        <a class="button button-ghost" data-need="instagram" data-ig target="_blank" rel="noopener"><svg class="icon"><use href="#i-instagram"/></svg>Instagram</a>
+        <a class="button button-ghost" data-need="telegram" data-tg target="_blank" rel="noopener"><svg class="icon"><use href="#i-send"/></svg>Telegram</a>
+        <a class="button button-ghost" data-need="viber" data-viber><svg class="icon"><use href="#i-chat"/></svg>Viber</a>
+      </div>
+      <div class="hero-links">
+        <a data-need="rating" href="#reviews"><svg class="icon"><use href="#i-star"/></svg><span><strong><span data-bind="rating"></span> ★</strong><small><span data-bind="reviewsCount"></span> відгуків Google</small></span></a>
+        <a data-need="hours" href="#visit"><svg class="icon"><use href="#i-clock"/></svg><span><strong>Графік</strong><small data-bind="hours"></small></span></a>
+        <a data-need="mapsLink" data-maps target="_blank" rel="noopener"><svg class="icon"><use href="#i-pin"/></svg><span><strong>Маршрут</strong><small>Google Maps</small></span></a>
+      </div>
+    </div>
+    <a class="hero-scroll" href="#items" data-need="items"><span data-bind="itemsNav"></span><svg class="icon"><use href="#i-down"/></svg></a>
+  </section>
+
+  <section class="section" id="items" data-need="items" aria-labelledby="items-title">
+    <div class="wrap">
+      <p class="eyebrow" data-bind="name"></p>
+      <div class="section-head">
+        <h2 id="items-title" data-bind="itemsTitle"></h2>
+        <a class="text-link" data-need="instagram" data-ig target="_blank" rel="noopener">Актуальне в Instagram <svg class="icon"><use href="#i-up"/></svg></a>
+      </div>
+      <div class="card-grid" id="itemList"></div>
+      <p class="note" data-need="itemsNote" data-bind="itemsNote"></p>
+    </div>
+  </section>
+
+  <section class="section section-alt" id="about" data-need="features" aria-labelledby="about-title">
+    <div class="wrap split">
+      <div class="split-photo" id="aboutPhoto"></div>
+      <div class="split-copy">
+        <p class="eyebrow" data-bind="featuresTitle"></p>
+        <h2 id="about-title"><span data-bind="name"></span> <em data-bind="city"></em></h2>
+        <p data-bind="lead"></p>
+        <ul class="chips" id="features"></ul>
+        <a class="button button-primary" id="mainContact" target="_blank" rel="noopener"></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="gallery-section" data-need="photos" aria-label="Фото">
+    <div class="wrap">
+      <p class="eyebrow">Фото</p>
+      <div class="gallery" id="gallery"></div>
+    </div>
+  </section>
+
+  <section class="section section-alt" id="reviews" data-need="reviews" aria-labelledby="reviews-title">
+    <div class="wrap">
+      <p class="eyebrow">Відгуки з Google Maps</p>
+      <div class="section-head">
+        <h2 id="reviews-title">Що кажуть <em>клієнти</em></h2>
+        <a class="text-link" data-maps target="_blank" rel="noopener">Усі відгуки <svg class="icon"><use href="#i-up"/></svg></a>
+      </div>
+      <div class="reviews" id="reviewList"></div>
+    </div>
+  </section>
+
+  <section class="section" id="visit" aria-labelledby="visit-title">
+    <div class="wrap">
+      <div class="split">
+        <div>
+          <p class="eyebrow">Контакти</p>
+          <h2 id="visit-title">Чекаємо<br><em>на вас.</em></h2>
+        </div>
+        <div class="visit-card">
+          <address>
+            <div class="contact-row" data-need="address"><svg class="icon"><use href="#i-pin"/></svg><span><small>Адреса</small><span data-bind="address"></span></span></div>
+            <a class="contact-row" data-need="phone" data-call><svg class="icon"><use href="#i-phone"/></svg><span><small>Телефон</small><span data-bind="phoneDisplay"></span></span></a>
+            <div class="contact-row" data-need="hours"><svg class="icon"><use href="#i-clock"/></svg><span><small>Графік</small><span data-bind="hours"></span></span></div>
+            <a class="contact-row" data-need="instagram" data-ig target="_blank" rel="noopener"><svg class="icon"><use href="#i-instagram"/></svg><span><small>Instagram</small><span id="igHandle"></span></span></a>
+            <a class="contact-row" data-need="telegram" data-tg target="_blank" rel="noopener"><svg class="icon"><use href="#i-send"/></svg><span><small>Telegram</small>Написати</span></a>
+            <a class="contact-row" data-need="viber" data-viber><svg class="icon"><use href="#i-chat"/></svg><span><small>Viber</small>Написати</span></a>
+          </address>
+          <a class="button button-ghost" data-need="mapsLink" data-maps target="_blank" rel="noopener">Прокласти маршрут <svg class="icon"><use href="#i-up"/></svg></a>
+        </div>
+      </div>
+      <iframe class="map" id="map" data-need="mapsLink" title="Карта" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-content">
+    <a class="brand" href="#top"><strong data-bind="name"></strong><small data-bind="city"></small></a>
+    <small><span data-need="demo">Демонстраційна версія сайту · дані з Google Maps</span></small>
+    <a class="icon-link" data-need="instagram" data-ig target="_blank" rel="noopener" aria-label="Instagram"><svg class="icon"><use href="#i-instagram"/></svg></a>
+  </div>
+</footer>
+<script src="config.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
